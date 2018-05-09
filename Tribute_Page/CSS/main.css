@@ -1,0 +1,18 @@
+body{
+  margin-top: 60px;
+}
+h1{
+  font-family: Lobster, Monospace;
+}
+#cast{
+  font-size:13px;
+  line-height:19px;
+  font-family:Candara;
+}
+#Chinese-title{
+  font-size:30px;
+  font-family:"SimSum";
+}
+#sub{
+  font-size:10px;
+}
