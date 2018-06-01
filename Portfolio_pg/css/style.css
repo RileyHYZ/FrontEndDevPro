@@ -1,15 +1,19 @@
 html,
 body,
 header,
-#intro{
+#fstback{
     height:100%;
 }
 
-#intro{
+#fstback{
     background: url("../img/IMG.jpg")no-repeat center center fixed;
+    /* background-color: snow; */
     -webkit-background-size: cover;
     -moz-background-size:cover;
     -o-background-size:cover;
     background-size:cover;
 
+}
+.text-wide {
+    letter-spacing: 10px;
 }
