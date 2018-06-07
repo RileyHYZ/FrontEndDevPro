@@ -3,17 +3,124 @@ body,
 header,
 #fstback{
     height:100%;
+    font-family:"Courier New", Courier, monospace;
 }
 
 #fstback{
     background: url("../img/IMG.jpg")no-repeat center center fixed;
-    /* background-color: snow; */
+    /* opacity:0.4; */
+    font-family:'Gill Sans', sans-serif;
+    /* background-color: lightgreen; */
     -webkit-background-size: cover;
     -moz-background-size:cover;
     -o-background-size:cover;
     background-size:cover;
 
 }
+#readmore{
+    position:        relative;
+    color:           black;
+    /* text-decoration: underline; */
+    -webkit-text-decoration-color: springgreen; /* Safari */    
+    text-decoration-color: springgreen;
+    border-bottom: 8px solid springgreen;
+}
+
+#readmore:hover:after{
+    content:    "";
+    position:   absolute;
+    left:       0;
+    bottom:     0px;      /* Control bottom position */
+    width:      100%;
+    height:     6px;       /* Set your desired thickness */
+    background: springgreen;
+  }
+
+
+/* .scrolled{
+    color: dodgerblue;
+    transition: 0.3s;
+} */
+  
+#sec{
+    height:150px;
+}
+
+label{
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:2vw;
+    font-weight: 400;
+}
+.box{
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2vw;
+    width: 2vw;
+    border:2px solid white;
+    border-radius:3px;
+}
+.box input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.box:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+/* .box input:checked ~ .checkmark {
+    background-color: white;
+} */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.box input:checked ~ .checkmark:after {
+    display: block;
+}
+.box .checkmark:after {
+    left: 1vw;
+    top: -0.8vw;
+    width: 1vw;
+    height: 2vw;
+    border: solid springgreen;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
 .text-wide {
     letter-spacing: 10px;
+}
+
+.top-nav-collapse{
+    background-color: snow;
+}
+
+@media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+      background: black;
+      color: white;
+    }
+  }
+@media (min-width: 800px) and (max-width: 850px) {
+    .navbar:not(.top-nav-collapse) {
+      background: black;
+      color: white;
+    }
 }

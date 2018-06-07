@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<script>
+    // function myFunction() {
+    //     var change = $(".myname");
+    //     var elmnt = document.getElementById("myname");
+    //     var x = elmnt.scrollTop;
+    //     document.getElementById ("demo").innerHTML = "Horizontally: " + x + "px<br>Vertically: ";
+    //    if(x>=3){
+    //       change.addClass("scrolled");
+    //    }
+    //    else{
+    //        change.removeClass("scrolled");
+    //    }
+    // }
+</script>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,126 +28,127 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
-    <!-- Your custom styles (optional) -->
-    <link href="css/style.css" rel="stylesheet">
     <link rel='stylesheet' id='compiled.css-css'  href='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled.min.css?ver=4.5.0' type='text/css' media='all' />
-    
+    <!-- my style sheet -->
+    <link href="css/style.css" rel="stylesheet">   
 </head>
 
-<!-- Carousel options -->
-<script>
-    $('.carousel').carousel({
-        interval: 3000,
-    })
-</script>
 
 <body>
-    <!-- Main Navigation -->
-    <header>
-        <!--Navbar-->
+    <!-- Navigation section -->
+    
+        <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
             <div class="container">
-                <!-- Navbar brand -->
-                <a class="navbar-brand black-text font-weight-bold" href="#">RILEY ZHOU</a>
-            
+                <!-- Brand -->
+                <a id="name" class="navbar-brand black-text font-weight-bold" style="font-family:'Gill Sans', sans-serif;font-size:25px">RILEY_ZHOU.cc</a>
                 <!-- Collapse button -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-            
                 <!-- Collapsible content -->
-                <div class="collapse navbar-collapse" id="basicExampleNav">
-            
-                    <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbar">
+                <!-- Links -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link grey-text" href="#">HOME
+                            <a class="nav-link font-weight-bold" style="color: darkorange;font-size:18px" href="#"><span style="color:violet">#include </span>&lt;Home&gt;
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link grey-text" href="#intro">INTRO</a>
+                            <a class="nav-link font-weight-bold" style="color: darkorange;font-size:18px" href="#intro">&lt;Intro&gt;</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link grey-text" href="#portfolio">PORTFOLIO</a>
+                            <a class="nav-link font-weight-bold" style="color: darkorange;font-size:18px" href="#intro">&lt;Portfolio&gt;</a>
                         </li>
-                        <!-- Dropdown -->
                         <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle grey-text" href="#link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">LINKS</a>
-                                <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="#">LINKEDIN</a>
-                                    <a class="dropdown-item" href="#">GITHUB</a>
-                                </div>
-                            </li>
-                        <li class="nav-item">
-                                <a class="nav-link grey-text" href="#contact">CONTACT</a>
+                            <a class="nav-link dropdown-toggle font-weight-bold" style="color: darkorange;font-size:18px" href="#link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&lt;Links&gt;</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">&lt;LinkedIn&gt;</a>
+                                <a class="dropdown-item" href="#">&lt;GitHub&gt;</a>
+                            </div>
                         </li>
-            
-            
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold" style="color: darkorange;font-size:18px" href="#contact">&lt;Contact&gt;</a>
+                        </li>
                     </ul>
-                    <!-- Links -->
-
                 </div>
-                <!-- Collapsible content -->
             </div>
         </nav>
-        <!--/.Navbar-->
 
-        <!-- Mask -->
-        <div id="fstback" class="view">
-            <div class="mask flex-center"> <!--rgba-black-slight-->
-                <div class="container-fluid full-big-img d-flex align-items-center justify-content-center">       
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-md-12 text-left">
-                            <!-- Heading -->
-                            <h1 class=" black-text mb-2" style="font-family:'fantasy'; font-size:120px">Hi There</h2>
-                            <!-- Divider --> 
-                            <hr  class="hr-grey"> 
-                            <!-- Description -->
-                            <h4 class="grey-text my-4 text-center">Current student in SE@UWaterloo | Programmimg && Art and Music </h4>
-                            <button type="button" class="btn btn-outline-black"><i class="fa fa-linkedin mr-2"></i> LinkedIn</button>
-                            <button type="button" class="btn btn-outline-black"><i class="fa fa-github mr-2"></i> GitHub</button>
-                        </div>
-                    </div>
+    
+    <main>
+        <!-- Section of greeting -->
+        <div id="header" class="container-fluid mb-2">
+            <div class="row mt-5 ml-5">
+                <span class="font-weight-bold text-center mt-5 ml-5" style="color:black;font-family:'Courier New', Courier, monospace; font-size:11.5vw">Hi there</span><span style="color:springgreen;font-family: 'Arial Black', Gadget, sans-serif;font-size: 13vw">;</span></span>
+            </div>
+            <div class="row ml-5" style="font-size: 1.3vw">
+                <h4 class="h4-responsive grey-text text-left ml-5">cout&lt;&lt;<span style="color: black">I'm <span class="font-weight-bold">Riley Zhou</span>, a student in SE <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;and a programmer based in Waterloo. 
+                    <br>&emsp;&emsp;&emsp;&emsp;</span>&lt;&lt;<span style="color:black">BTW.. I Love Drawing </span><span style="color: violet; font-weight: bold">&gt;.&lt;</span> </h4>
+            </div>
+            <div class="ml-5">
+                <p style="font-size:1.5vw"><a id="readmore" href="#" class="ml-5">../Read More</a> or keep scrolling *///^\\\* <img width="23px" src="https://emojipedia-us.s3.amazonaws.com/thumbs/240/google/119/three-button-mouse_1f5b1.png"></p>
+            </div>
+            <br><br><br><br><br>
+        </div>
+        <!-- Greeting -->
+
+        <div id="sec" class="rgba-grey-slight">
+            <!-- Mask -->
+            <div class="row my-4">
+                <div class="mb-4 col-md-12">
+                    <p class="mr-5 mt-4" style="font-size:1.5vw;text-align:right">../UWaterloo/Software_Engineering/1B</p>
                 </div>
             </div>
         </div>
-        <!-- Mask -->
-    
 
-
-    </header>
-    <!-- Main Navigation --> 
-
-    <!-- Mask -->
-    <div id="fstback" class="view">
-            <div class="mask flex-center"> <!--rgba-black-slight-->
-                <div class="container-fluid full-big-img d-flex align-items-center justify-content-center">       
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-md-12 text-left">
-                            <!-- Heading -->
-                            <h1 class="h1-responsive font-weight-bold grey-text mb-2 text-wide">RILEY HUIYI ZHOU</h2>
-                            <!-- Divider --> 
-                            <hr  class="hr-grey"> 
-                            <!-- Description -->
-                            <h4 class="grey-text my-4 text-center">Current student in SE@UWaterloo | Programmimg && Art and Music </h4>
-                            <button type="button" class="btn btn-outline-black"><i class="fa fa-linkedin mr-2"></i> LinkedIn</button>
-                            <button type="button" class="btn btn-outline-black"><i class="fa fa-github mr-2"></i> GitHub</button>
-                        </div>
-                    </div>
+        <div class="mask flex-center rgba-grey-light">
+            <!-- Mask -->
+            <div class="row my-4">
+                <div class="my-4 col-md-12 text-left">
+                    <!-- Heading -->
+                    <h class="h1-responsive font-weight-bold mt-5 mb-3 text-center text-wide" style="font-family:'Gill Sans', sans-serif; color: grey">RILEY HUIYI ZHOU</h>
+                    <!-- Divider --> 
                 </div>
             </div>
         </div>
-        <!-- Mask -->
-    
-    <!-- Main layout -->
-    <main class="mt-5">
-        <div class="container">
+
+        
+        <div id="fstback" class="mask flex-center ">
+            <!-- Mask -->
+            <div class="row my-4">
+                <div class="my-4 col-md-12 text-center white-text">
+                    <!-- Description -->
+                    <label class="my-5">cin&gt;&gt;</label>
+                    <label class="box">Student
+                        <input type="checkbox" checked="checked"></input>
+                        <span class="checkmark"></span>
+                    </label> 
+                    <label class="box">Programming
+                        <input type="checkbox" checked="checked"></input>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="box">Film && Drama
+                        <input type="checkbox" checked="checked"></input>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="box">Art && Music
+                        <input type="checkbox" checked="checked"></input>
+                        <span class="checkmark"></span>
+                    </label><br>
+                    <button type="button" class="btn btn-outline-white"><i class="fa fa-linkedin mr-2"></i> LinkedIn</button>
+                    <button type="button" class="btn btn-outline-white"><i class="fa fa-github mr-2"></i> GitHub</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
             <!-- Section: Intro -->
-            <section id="intro" class="text-center">
+            <section id="intro" class="mt-5 text-center">
                 <!-- Heading -->
-                <h2 class="mb-4 font-weight-bold">ABOUT ME</h2>  
+                <h2 class="myname mt-5 font-weight-bold">ABOUT ME</h2>  
                 <!-- Grid row -->
                 <div class="row d-flex justify-content-center mb-4">
                     <!-- Grid column -->
@@ -148,331 +164,320 @@
                     </div>
 
                 </div>
-                <!-- Grid row -->
-                <div class="row">
-                    <!-- Grid column -->
-                    <div class="col-md-4 mb-5">
-                        <i class="fa fa-camera-retro fa-4x orange-text"></i>
-                        <h4 class="my-4 font-weight-bold">Experience</h4>
-                        <p class="grey-text">descriptions here descriptions here descriptions here descriptions here descriptions heredescriptions heredescriptions heredescriptions here
-                                descriptions heredescriptions heredescriptions here descriptions heredescriptions here descriptions here descriptions here 
-                        </p>
-                    </div>
-
-                    <!-- Grid column -->
-                    <div class="col-md-4 mb-5">
-                        <i class="fa fa-camera-retro"></i>
-                        <h4 class="my-4 font-weight-bold">Experience</h4>
-                        <p class="grey-text">descriptions here descriptions here descriptions here descriptions here descriptions heredescriptions heredescriptions heredescriptions here
-                                descriptions heredescriptions heredescriptions here descriptions heredescriptions here descriptions here descriptions here 
-                        </p>
-                    </div>
-
-                    <!-- Grid column -->
-                    <div class="col-md-4 mb-5">
-                            <i class="fa fa-camera-retro"></i>
-                            <h4 class="my-4">Experience</h4>
-                            <p class="grey-text">descriptions here descriptions here descriptions here descriptions here descriptions heredescriptions heredescriptions heredescriptions here
-                                    descriptions heredescriptions heredescriptions here descriptions heredescriptions here descriptions here descriptions here 
-                            </p>
-                    </div>
-                </div>
-
-            </section>
-            <!-- Section: Intro -->
-            <hr class="my-5">
-
-            <!-- Section: portfolio -->
-            <section id="portfolio">
-                <!-- Grid row -->
-                <div class="row">
-                    <!-- Grid Column -->
-                    <div class="col-lg-4 col-md-12 mb-4">
-                        <div class="view overlay z-depth-1-half">
-                            <img src="img/scene.jpg" class="img-fluid" alt="IMG">
-                            <div class="mask rgba-white-light"></div>
-                        </div>
-                        <h4 class="my-4 font-weight-bold">Heading</h4>
-                        <p class="grey-text">descriptions here descriptions here descriptions here descriptions here descriptions heredescriptions heredescriptions heredescriptions here
-                                descriptions heredescriptions heredescriptions here descriptions heredescriptions here descriptions here descriptions here 
-                        </p>
-
-                    </div>
-
-                    <!-- Grid Column -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="view overlay z-depth-1-half">
-                            <img src="img/scene.jpg" class="img-fluid" alt="IMG">
-                            <div class="mask rgba-white-light"></div>
-                        </div>
-                        <h4 class="my-4 font-weight-bold">Heading</h4>
-                        <p class="grey-text">descriptions here descriptions here descriptions here descriptions here descriptions heredescriptions heredescriptions heredescriptions here
-                                descriptions heredescriptions heredescriptions here descriptions heredescriptions here descriptions here descriptions here 
-                        </p>
-                    </div>
-
-                    <!-- Grid Column -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="view overlay z-depth-1-half">
-                            <img src="img/scene.jpg" class="img-fluid" alt="IMG">
-                            <div class="mask rgba-white-light"></div>
-                        </div>
-                        <h4 class="my-4 font-weight-bold">Heading</h4>
-                        <p class="grey-text">descriptions here descriptions here descriptions here descriptions here descriptions heredescriptions heredescriptions heredescriptions here
-                                descriptions heredescriptions heredescriptions here descriptions heredescriptions here descriptions here descriptions here 
-                        </p>
-                    </div>
-                </div>
-
-                 <!-- Grid row -->
-                 <div class="row">
-                    <!-- Grid Column -->
-                    <div class="col-lg-4 col-md-12 mb-4">
-                        <div class="view overlay z-depth-1-half">
-                            <img src="img/scene.jpg" class="img-fluid" alt="IMG">
-                            <div class="mask rgba-white-light"></div>
-                        </div>
-                        <h4 class="my-4 font-weight-bold">Heading</h4>
-                        <p class="grey-text">descriptions here descriptions here descriptions here descriptions here descriptions heredescriptions heredescriptions heredescriptions here
-                                descriptions heredescriptions heredescriptions here descriptions heredescriptions here descriptions here descriptions here 
-                        </p>
-                    </div>
-
-                    <!-- Grid Column -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="view overlay z-depth-1-half">
-                            <img src="img/scene.jpg" class="img-fluid" alt="IMG">
-                            <div class="mask rgba-white-light"></div>
-                        </div>
-                        <h4 class="my-4 font-weight-bold">Heading</h4>
-                        <p class="grey-text">descriptions here descriptions here descriptions here descriptions here descriptions heredescriptions heredescriptions heredescriptions here
-                                descriptions heredescriptions heredescriptions here descriptions heredescriptions here descriptions here descriptions here 
-                        </p>
-                    </div>
-
-                    <!-- Grid Column -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="view overlay z-depth-1-half">
-                            <img src="img/scene.jpg" class="img-fluid" alt="IMG">
-                            <div class="mask rgba-white-light"></div>
-                        </div>
-                        <h4 class="my-4 font-weight-bold">Heading</h4>
-                        <p class="grey-text">descriptions here descriptions here descriptions here descriptions here descriptions heredescriptions heredescriptions heredescriptions here
-                                descriptions heredescriptions heredescriptions here descriptions heredescriptions here descriptions here descriptions here 
-                        </p>           
-                    </div>
-                </div>
-            </section>
-            <!-- Section: portfolio -->
-            <hr class="my-5">
-            
-
-
-            <!-- Section: Links -->
-            <section id="portfolio">
-                <h2 class="mb-5 font-weight-bold text-center">Links</h2>
-                <!-- grid row -->
-                <div class="row">
-                    <!-- grid col -->
-                    <div class="col-md-6 mb-4">
-
-                    <!-- Carousel Wrapper-->
-                    <div id="carousel-imgs" class="carousel slide carousel-fade" data-ride="carousel">
-                        <!--Indicators-->
-                        <ol class="carousel-indicators">
-                            <li data-target="#carousel-imgs" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-imgs" data-slide-to="1"></li>
-                            <li data-target="#carousel-imgs" data-slide-to="2"></li>
-                        </ol>
-                        <!--/.Indicators-->
-                        <!--Slides-->
-                        <div class="carousel-inner">
-                            <!--First slide-->
-                            <div class="carousel-item active">
-                                <img class="d-block w-100" src="img/IMG.jpg" alt="First slide">
-                            </div>
-                            <!--/First slide-->
-                            <!--Second slide-->
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="img/scene.jpg" alt="Second slide">
-                            </div>
-                            <!--/Second slide-->
-                            <!--Third slide-->
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="img/IMG.jpg" alt="Third slide">
-                            </div>
-                            <!--/Third slide-->
-                        </div>
-                        <!--/.Slides-->
-                        <!--Controls-->
-                        <a class="carousel-control-prev" href="#carousel-imgs" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carousel-imgs" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                        <!--/.Controls-->
-                    </div>
-                    <!--/.Carousel Wrapper-->
-                    
-                    </div>
-                    <!-- grid col -->
-                    <div class="col-md-6">
-                        <a href="" class="teal-text">
-                            <h6 class="mb-4"><i class="fa fa-heart mr-2"></i><strong>Lifestyle</strong></h6>
-                        </a>
-                        <h4 class="mb-3"><strong>Very Long Title</strong></h4>
-                        <p class="grey-text">descriptions here descriptions here descriptions here descriptions here descriptions heredescriptions heredescriptions heredescriptions here
-                                descriptions heredescriptions heredescriptions here descriptions heredescriptions here descriptions here descriptions here 
-                        </p>
-                        <p>by<a href="">....</a>,09.09.2018</p>
-                        <a class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </section>
-            <!-- Section: Links -->
-            <hr class="my-5">
-
-
-
-            <!-- Section: Contact -->
-            <section id="contact">
-                <!-- Heading -->
-                <h2 class="mb-5 font-weight-bold text-center">Contact Me</h2> 
-                <!-- Grid row -->
-                <div class="row">
-                    <!-- Grid Column -->
-                    <div class="col-lg-5 col-md-12">
-                        <form class="p-5"> 
-                            <form class="p-5"> 
-                            <div class="md-form form-sm">
-                                <i class="fa fa-user prefix grey-text"></i>
-                                <input type="text" id="input-1" class="form-control">
-                                <label for="input-1">Your Name</label>
-                            </div>
-                            <div class="md-form form-sm">
-                                <i class="fa fa-envelope prefix grey-text"></i>
-                                <input type="text" id="input-2" class="form-control">
-                                <label for="input-1">Your Email</label>
-                            </div>
-                            <div class="md-form form-sm">
-                                <i class="fa fa-tag prefix grey-text"></i>
-                                <input type="text" id="input-3" class="form-control">
-                                <label for="input-1">Subject</label>
-                            </div>
-                            <div class="md-form form-sm">
-                                <i class="fa fa-pencil prefix grey-text"></i>
-                                <textarea type="text" id="input-4" class="md-textarea" style="height:100px"></textarea>
-                                <label for="input-1">Your Name</label>
-                            </div>
-
-                            <div class="text-center">
-                                <button class="btn btn-unique mr-2"><i class="fa fa-paper-plane mr-2"></i>Send</button>
-                            </div>
-                        </form>
-                        </form>
-                    </div>
-                    <!-- Grid Column -->
-                    <div class="col-lg-7 col-md-12">
                         <!-- Grid row -->
-                        <div class="row text-center">
-                            <!-- grid column -->
-                            <div class="col-md-4 mb-3">
-                                <p><i class="fa fa-map mr-2 grey-text"></i>Waterloo, ON</p>
+                        <div class="row">
+                            <!-- Grid column -->
+                            <div class="col-md-4 mb-5">
+                                <i class="fa fa-camera-retro fa-4x orange-text"></i>
+                                <h4 class="my-4 font-weight-bold">Experience</h4>
+                                <p class="grey-text">descriptions here descriptions here descriptions here descriptions here descriptions heredescriptions heredescriptions heredescriptions here
+                                        descriptions heredescriptions heredescriptions here descriptions heredescriptions here descriptions here descriptions here 
+                                </p>
                             </div>
-                            <!-- grid column -->
-                            <div class="col-md-4 mb-3">
-                                <p><i class="fa fa-phone mr-2 grey-text"></i>+1 6478775992</p>
+        
+                            <!-- Grid column -->
+                            <div class="col-md-4 mb-5">
+                                <i class="fa fa-camera-retro"></i>
+                                <h4 class="my-4 font-weight-bold">Experience</h4>
+                                <p class="grey-text">descriptions here descriptions here descriptions here descriptions here descriptions heredescriptions heredescriptions heredescriptions here
+                                        descriptions heredescriptions heredescriptions here descriptions heredescriptions here descriptions here descriptions here 
+                                </p>
                             </div>
-                            <!-- grid column -->
-                            <div class="col-md-4 mb-3">
-                                <p><i class="fa fa-envelope mr-2 grey-text"></i>ri.hyzhou@gmail.com</p>
+        
+                            <!-- Grid column -->
+                            <div class="col-md-4 mb-5">
+                                    <i class="fa fa-camera-retro"></i>
+                                    <h4 class="my-4">Experience</h4>
+                                    <p class="grey-text">descriptions here descriptions here descriptions here descriptions here descriptions heredescriptions heredescriptions heredescriptions here
+                                            descriptions heredescriptions heredescriptions here descriptions heredescriptions here descriptions here descriptions here 
+                                    </p>
                             </div>
-                            
                         </div>
-                        <!-- Google map -->
-                        <div id="map-container" class="map-container z-depth-1-half" style="filter:grayscale(75%);height:400px"></div>
-                    </div>
-
+        
+                    </section>
+                    <!-- Section: Intro -->
+                    <hr class="my-5">
+        
+                    <!-- Section: portfolio -->
+                    <section id="portfolio">
+                        <!-- Grid row -->
+                        <div class="row">
+                            <!-- Grid Column -->
+                            <div class="col-lg-4 col-md-12 mb-4">
+                                <div class="view overlay z-depth-1-half">
+                                    <img src="img/scene.jpg" class="img-fluid" alt="IMG">
+                                    <div class="mask rgba-white-light"></div>
+                                </div>
+                                <h4 class="my-4 font-weight-bold">Heading</h4>
+                                <p class="grey-text">descriptions here descriptions here descriptions here descriptions here descriptions heredescriptions heredescriptions heredescriptions here
+                                        descriptions heredescriptions heredescriptions here descriptions heredescriptions here descriptions here descriptions here 
+                                </p>
+        
+                            </div>
+        
+                            <!-- Grid Column -->
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="view overlay z-depth-1-half">
+                                    <img src="img/scene.jpg" class="img-fluid" alt="IMG">
+                                    <div class="mask rgba-white-light"></div>
+                                </div>
+                                <h4 class="my-4 font-weight-bold">Heading</h4>
+                                <p class="grey-text">descriptions here descriptions here descriptions here descriptions here descriptions heredescriptions heredescriptions heredescriptions here
+                                        descriptions heredescriptions heredescriptions here descriptions heredescriptions here descriptions here descriptions here 
+                                </p>
+                            </div>
+        
+                            <!-- Grid Column -->
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="view overlay z-depth-1-half">
+                                    <img src="img/scene.jpg" class="img-fluid" alt="IMG">
+                                    <div class="mask rgba-white-light"></div>
+                                </div>
+                                <h4 class="my-4 font-weight-bold">Heading</h4>
+                                <p class="grey-text">descriptions here descriptions here descriptions here descriptions here descriptions heredescriptions heredescriptions heredescriptions here
+                                        descriptions heredescriptions heredescriptions here descriptions heredescriptions here descriptions here descriptions here 
+                                </p>
+                            </div>
+                        </div>
+        
+                         <!-- Grid row -->
+                         <div class="row">
+                            <!-- Grid Column -->
+                            <div class="col-lg-4 col-md-12 mb-4">
+                                <div class="view overlay z-depth-1-half">
+                                    <img src="img/scene.jpg" class="img-fluid" alt="IMG">
+                                    <div class="mask rgba-white-light"></div>
+                                </div>
+                                <h4 class="my-4 font-weight-bold">Heading</h4>
+                                <p class="grey-text">descriptions here descriptions here descriptions here descriptions here descriptions heredescriptions heredescriptions heredescriptions here
+                                        descriptions heredescriptions heredescriptions here descriptions heredescriptions here descriptions here descriptions here 
+                                </p>
+                            </div>
+        
+                            <!-- Grid Column -->
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="view overlay z-depth-1-half">
+                                    <img src="img/scene.jpg" class="img-fluid" alt="IMG">
+                                    <div class="mask rgba-white-light"></div>
+                                </div>
+                                <h4 class="my-4 font-weight-bold">Heading</h4>
+                                <p class="grey-text">descriptions here descriptions here descriptions here descriptions here descriptions heredescriptions heredescriptions heredescriptions here
+                                        descriptions heredescriptions heredescriptions here descriptions heredescriptions here descriptions here descriptions here 
+                                </p>
+                            </div>
+        
+                            <!-- Grid Column -->
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="view overlay z-depth-1-half">
+                                    <img src="img/scene.jpg" class="img-fluid" alt="IMG">
+                                    <div class="mask rgba-white-light"></div>
+                                </div>
+                                <h4 class="my-4 font-weight-bold">Heading</h4>
+                                <p class="grey-text">descriptions here descriptions here descriptions here descriptions here descriptions heredescriptions heredescriptions heredescriptions here
+                                        descriptions heredescriptions heredescriptions here descriptions heredescriptions here descriptions here descriptions here 
+                                </p>           
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section: portfolio -->
+                    <hr class="my-5">
+                    
+        
+        
+                    <!-- Section: Links -->
+                    <section id="portfolio">
+                        <h2 class="mb-5 font-weight-bold text-center">Links</h2>
+                        <!-- grid row -->
+                        <div class="row">
+                            <!-- grid col -->
+                            <div class="col-md-6 mb-4">
+        
+                            <!-- Carousel Wrapper-->
+                            <div id="carousel-imgs" class="carousel slide carousel-fade" data-ride="carousel">
+                                <!--Indicators-->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-imgs" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-imgs" data-slide-to="1"></li>
+                                    <li data-target="#carousel-imgs" data-slide-to="2"></li>
+                                </ol>
+                                <!--/.Indicators-->
+                                <!--Slides-->
+                                <div class="carousel-inner">
+                                    <!--First slide-->
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="img/IMG.jpg" alt="First slide">
+                                    </div>
+                                    <!--/First slide-->
+                                    <!--Second slide-->
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="img/scene.jpg" alt="Second slide">
+                                    </div>
+                                    <!--/Second slide-->
+                                    <!--Third slide-->
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="img/IMG.jpg" alt="Third slide">
+                                    </div>
+                                    <!--/Third slide-->
+                                </div>
+                                <!--/.Slides-->
+                                <!--Controls-->
+                                <a class="carousel-control-prev" href="#carousel-imgs" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carousel-imgs" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                                <!--/.Controls-->
+                            </div>
+                            <!--/.Carousel Wrapper-->
+                            
+                            </div>
+                            <!-- grid col -->
+                            <div class="col-md-6">
+                                <a href="" class="teal-text">
+                                    <h6 class="mb-4"><i class="fa fa-heart mr-2"></i><strong>Lifestyle</strong></h6>
+                                </a>
+                                <h4 class="mb-3"><strong>Very Long Title</strong></h4>
+                                <p class="grey-text">descriptions here descriptions here descriptions here descriptions here descriptions heredescriptions heredescriptions heredescriptions here
+                                        descriptions heredescriptions heredescriptions here descriptions heredescriptions here descriptions here descriptions here 
+                                </p>
+                                <p>by<a href="">....</a>,09.09.2018</p>
+                                <a class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section: Links -->
+                    <hr class="my-5">
+        
+        
+        
+                    <!-- Section: Contact -->
+                    <section id="contact">
+                        <!-- Heading -->
+                        <h2 class="mb-5 font-weight-bold text-center">Contact Me</h2> 
+                        <!-- Grid row -->
+                        <div class="row">
+                            <!-- Grid Column -->
+                            <div class="col-lg-5 col-md-12">
+                                <form class="p-5"> 
+                                    <form class="p-5"> 
+                                    <div class="md-form form-sm">
+                                        <i class="fa fa-user prefix grey-text"></i>
+                                        <input type="text" id="input-1" class="form-control">
+                                        <label for="input-1">Your Name</label>
+                                    </div>
+                                    <div class="md-form form-sm">
+                                        <i class="fa fa-envelope prefix grey-text"></i>
+                                        <input type="text" id="input-2" class="form-control">
+                                        <label for="input-1">Your Email</label>
+                                    </div>
+                                    <div class="md-form form-sm">
+                                        <i class="fa fa-tag prefix grey-text"></i>
+                                        <input type="text" id="input-3" class="form-control">
+                                        <label for="input-1">Subject</label>
+                                    </div>
+                                    <div class="md-form form-sm">
+                                        <i class="fa fa-pencil prefix grey-text"></i>
+                                        <textarea type="text" id="input-4" class="md-textarea" style="height:100px"></textarea>
+                                        <label for="input-1">Your Name</label>
+                                    </div>
+        
+                                    <div class="text-center">
+                                        <button class="btn btn-unique mr-2"><i class="fa fa-paper-plane mr-2"></i>Send</button>
+                                    </div>
+                                </form>
+                                </form>
+                            </div>
+                            <!-- Grid Column -->
+                            <div class="col-lg-7 col-md-12">
+                                <!-- Grid row -->
+                                <div class="row text-center">
+                                    <!-- grid column -->
+                                    <div class="col-md-4 mb-3">
+                                        <p><i class="fa fa-map mr-2 grey-text"></i>Waterloo, ON</p>
+                                    </div>
+                                    <!-- grid column -->
+                                    <div class="col-md-4 mb-3">
+                                        <p><i class="fa fa-phone mr-2 grey-text"></i>+1 6478775992</p>
+                                    </div>
+                                    <!-- grid column -->
+                                    <div class="col-md-4 mb-3">
+                                        <p><i class="fa fa-envelope mr-2 grey-text"></i>ri.hyzhou@gmail.com</p>
+                                    </div>
+                                    
+                                </div>
+                                <!-- Google map -->
+                                <div id="map-container" class="map-container z-depth-1-half" style="filter:grayscale(75%);height:400px"></div>
+                            </div>
+        
+                        </div>
+        
+                    </section>
+                    <!-- Section: contact -->
+                    <hr class="my-5">
+        
+        
                 </div>
-
-            </section>
-            <!-- Section: contact -->
-            <hr class="my-5">
-
-
-        </div>
     </main>
-    <!-- Main layout -->
 
     <!-- Footer -->
-    <footer>
-        
-<!-- Footer -->
-<footer class="page-footer font-small rgba-stylish-light darken-3 mt-4">
+    <footer class="page-footer font-small rgba-stylish-light darken-3 mt-4">
 
         <!-- Footer Links -->
         <div class="container">
-      
-          <!-- Grid row-->
-          <div class="row">
-      
-            <!-- Grid column -->
-            <div class="col-md-12 py-5">
-              <div class="mb-5 flex-center">
-      
-                 <!-- Social buttons -->
-  <ul class="list-unstyled list-inline text-center">
-        <li class="list-inline-item">
-          <a class="btn-floating btn-fb mx-1">
-            <i class="fa fa-facebook"> </i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="btn-floating btn-tw mx-1">
-            <i class="fa fa-twitter"> </i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="btn-floating red darken-3 mx-1">
-            <i class="fa fa-weibo"> </i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="btn-floating btn-li mx-1">
-            <i class="fa fa-linkedin"> </i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="btn-floating green accent-4 mx-1">
-            <i class="fa fa-weixin"> </i>
-          </a>
-        </li>
-      </ul>
-      <!-- Social buttons -->
-              </div>
+            <!-- Grid row-->
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-12 py-5">
+                    <div class="mb-3 flex-center">
+                        <!-- Social buttons -->
+                        <ul class="list-unstyled list-inline text-center">
+                            <li class="list-inline-item">
+                                <a class="btn-floating btn-fb mx-1">
+                                    <i class="fa fa-facebook"> </i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn-floating btn-tw mx-1">
+                                    <i class="fa fa-twitter"> </i>
+                                </a>
+                            </li>
+                                <li class="list-inline-item">
+                                <a class="btn-floating red darken-3 mx-1">
+                                    <i class="fa fa-weibo"> </i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn-floating btn-li mx-1">
+                                    <i class="fa fa-linkedin"> </i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn-floating green accent-4 mx-1">
+                                    <i class="fa fa-weixin"> </i>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- Social buttons -->
+                    </div>
+                </div>
+                <!-- Grid column -->
             </div>
-            <!-- Grid column -->
-      
-          </div>
-          <!-- Grid row-->
-      
+             <!-- Grid row-->
         </div>
         <!-- Footer Links -->
       
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3">© 2018 Copyright:
-          <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
+          <a href="https://HYZhou.com/"> HYZhou.com</a>
         </div>
         <!-- Copyright -->
       
-      </footer>
+    </footer>
       <!-- Footer -->
                             
-    </footer>
-    <!-- Footer -->
     
     <!-- SCRIPTS -->
     <!-- JQuery -->
@@ -507,5 +512,4 @@
         }
         google.maps.event.addDomListener(window, 'load', myMap);
     </script>
-    
 </body>
