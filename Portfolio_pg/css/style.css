@@ -124,3 +124,20 @@ label{
       color: white;
     }
 }
+
+#description{
+    font-family:'Gill Sans', sans-serif;
+    color:rgba(0, 0, 0, 0.507);
+}
+
+#borderbox{
+    display: inline-block;
+    width: 210px;
+    padding: 2px;
+    box-sizing: border-box;
+    background-color: rgb(21, 233, 127);
+}
+
+#study:hover{
+    background-color: #ccc;
+}
