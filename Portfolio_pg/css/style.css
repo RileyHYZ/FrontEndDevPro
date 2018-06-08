@@ -1,9 +1,12 @@
 html,
 body,
 header,
+#collapse_1,
+#collapse_2,
 #fstback{
     height:100%;
     font-family:"Courier New", Courier, monospace;
+    color:black;
 }
 
 #fstback{
@@ -142,3 +145,4 @@ label{
     background-color: #ccc;
     transition: 0.8s;
 }
+
