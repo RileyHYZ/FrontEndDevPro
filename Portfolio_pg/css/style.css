@@ -140,4 +140,5 @@ label{
 
 #study:hover{
     background-color: #ccc;
+    transition: 0.8s;
 }
