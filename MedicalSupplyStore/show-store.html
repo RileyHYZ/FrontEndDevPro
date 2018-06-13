@@ -1,0 +1,201 @@
+<!--css的地址-->
+<link type="text/css" rel="stylesheet" href="show-store.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<!--所有的icon的地址-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+      <header>
+      <div class = "head">  
+        <h1 class= "title">医疗器械门店管理 </h1>
+        <span class= "body"><button class="btn btn-light" href ="#"><i class="fa fa-chevron-circle-left mr-2"></i>返回</a></span>
+      </div>
+	</header>
+  
+  
+  <!--补全搜索-->
+	<form autocomplete="off" action="/action_page.php">
+        <div class="autocomplete" style="width:450px;">
+          <input id="myInput" type="text" name="mystore" placeholder="输入关键词搜索">
+        </div>
+        <input type="submit">
+        <div class= "right">
+            <i class="material-icons" style="font-size:36px">store</i>
+            <a href = "http://" target = "_blank"> 编辑门店</a>
+        </div>
+  </form>
+
+<script>
+	var client = 'mt';
+	window.CorpID = '<%= CorpID %>';
+	window.AgentID = '<%= AgentID %>';
+	function appRun() {// 所有应用页面都用这个函数名
+		wx.config(JSON.parse(cookies.get('jsApiConfig') || '{}'));
+		wx.ready(function () {
+			wx.hideOptionMenu();
+			$('app').fadeIn('slow');
+
+    });
+		wx.error(wxApiConErr(['hideOptionMenu']));
+	}
+			
+  function autocomplete(inp, arr) {
+          /*the autocomplete function 有两个arguments,
+          用户输入的text和一个array有着所有的可能值*/
+          var currentFocus;
+          /*开始通过输入值，筛出所有可能的店名*/
+          inp.addEventListener("input", function(e) {
+              var a, b, i, val = this.value;
+              /*关闭所有的已经打开的自动补全值list*/
+              closeAllLists();
+              if (!val) { return false;}
+              currentFocus = -1;
+              /*设置一个DIV用来储存可能的店名*/
+              a = document.createElement("DIV");
+              a.setAttribute("id", this.id + "autocomplete-list");
+              a.setAttribute("class", "autocomplete-items");
+              /*把DIV的值放入到可能的补全container里*/
+              this.parentNode.appendChild(a);
+              for (i = 0; i < arr.length; i++) {
+                /*检查输入值是否在店名里*/
+                if (arr[i].includes(val)){
+                  /*设置一个DIV来把对应店名选出来*/
+                  b = document.createElement("DIV");
+                  /*加黑一样的部分*/
+                  b.innerHTML = arr[i].substr(0,arr[i].indexOf(val));
+                  b.innerHTML += "<strong>" + val + "</strong>";
+                  b.innerHTML += arr[i].substr(arr[i].indexOf(val)+val.length);
+                  /*insert a input field that will hold the current array item's value:*/
+                  b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                  /*execute a function when someone clicks on the item value (DIV element):*/
+                  b.addEventListener("click", function(e) {
+                      /*insert the value for the autocomplete text field:*/
+                      inp.value = this.getElementsByTagName("input")[0].value;
+                      /*close the list of autocompleted values,
+                      (or any other open lists of autocompleted values:*/
+                      closeAllLists();
+                  });
+                  a.appendChild(b);
+                }
+              }
+          });
+          /*execute a function presses a key on the keyboard:*/
+          inp.addEventListener("keydown", function(e) {
+              var x = document.getElementById(this.id + "autocomplete-list");
+              if (x) x = x.getElementsByTagName("div");
+              if (e.keyCode == 40) {
+                /*If the arrow DOWN key is pressed,
+                increase the currentFocus variable:*/
+                currentFocus++;
+                /*and and make the current item more visible:*/
+                addActive(x);
+              } else if (e.keyCode == 38) { //up
+                /*If the arrow UP key is pressed,
+                decrease the currentFocus variable:*/
+                currentFocus--;
+                /*and and make the current item more visible:*/
+                addActive(x);
+              } else if (e.keyCode == 13) {
+                /*If the ENTER key is pressed, prevent the form from being submitted,*/
+                e.preventDefault();
+                if (currentFocus > -1) {
+                  /*and simulate a click on the "active" item:*/
+                  if (x) x[currentFocus].click();
+                }
+              }
+          });
+          function addActive(x) {
+            /*a function to classify an item as "active":*/
+            if (!x) return false;
+            /*start by removing the "active" class on all items:*/
+            removeActive(x);
+            if (currentFocus >= x.length) currentFocus = 0;
+            if (currentFocus < 0) currentFocus = (x.length - 1);
+            /*add class "autocomplete-active":*/
+            x[currentFocus].classList.add("autocomplete-active");
+          }
+          function removeActive(x) {
+            /*a function to remove the "active" class from all autocomplete items:*/
+            for (var i = 0; i < x.length; i++) {
+              x[i].classList.remove("autocomplete-active");
+            }
+          }
+          function closeAllLists(elmnt) {
+            /*close all autocomplete lists in the document,
+            except the one passed as an argument:*/
+            var x = document.getElementsByClassName("autocomplete-items");
+            for (var i = 0; i < x.length; i++) {
+              if (elmnt != x[i] && elmnt != inp) {
+                x[i].parentNode.removeChild(x[i]);
+              }
+            }
+          }
+          /*execute a function when someone clicks in the document:*/
+          document.addEventListener("click", function (e) {
+              closeAllLists(e.target);
+              });
+        }
+        
+        /*An array containing all the country names in the world:*/
+        var stores = ["健之佳眼睛保山五洲国际店","健之佳眼睛保山九龙店","健之佳眼睛一二一店"
+            ,"健之佳眼睛青年路店","健之佳眼睛威远街店","健之佳眼睛阳光旭苑店","健之佳眼睛博仁堂和谐店"]
+        autocomplete(document.getElementById("myInput"),stores)
+
+
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+   
+<button class="tablink" onclick="openPage('所有', this, 'white')">所有</button>
+<button class="tablink" onclick="openPage('一心堂', this, 'white')">一心堂</button>
+<button class="tablink" onclick="openPage('健之佳', this, 'white')" id="defaultOpen" >健之佳</button>
+<button class="tablink" onclick="openPage('白药', this, 'white')">白药</button>
+<button class="tablink" onclick="openPage('东骏', this, 'white')">东骏</button>
+
+<div id="所有" class="tabcontent">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
+</div>
+
+<div id="一心堂" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p> 
+</div>
+
+<div id="健之佳" class="tabcontent">
+  <h3>健之佳眼睛保山五洲国际店</h3>
+  <div class= "camera">
+    <i class="material-icons" style="font-size:36px">add_a_photo</i>
+    <a> 拍照上传</a>
+  </div>
+  <hr>
+  <p class= "manager">片区经理： 李习坤  店长：宗云丽</p>
+  <p>地址:昆明市春城路西片区和馨小区二栋</p>
+
+</div>
+
+<div id="白药" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<div id="东骏" class="tabcontent">
+    <h3>This</h3>
+    <p>Who we are and what we do.</p>
+  </div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+}
+
+// 从id是"defaultOpen"的里面选一个元素并打开它
+document.getElementById("defaultOpen").click();
+</script>
