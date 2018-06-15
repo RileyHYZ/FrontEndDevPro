@@ -1,10 +1,11 @@
-header{
+body{
     background: url("img/back.jpg");
     background-repeat:no-repeat;
     background-size:cover;
     /* padding: 450px 100px; */
     text-align: center;
     min-height:100vh;
+    margin: 0;
     /* vertical-align: middle; */
     justify-content: center;
 }
