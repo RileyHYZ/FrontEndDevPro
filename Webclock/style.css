@@ -63,8 +63,8 @@ html{
     background:red;
     /* border: 20px black; */
     width: 15%;
-    top:50%;
-    left:33%;
+    /* top:50%; */
+    left:35%;
 }
 .min-hand{
     height: 5px;
@@ -73,11 +73,12 @@ html{
 }
 
 .time{
+    position:relative;
     font-weight: bold;
     font-size:10vw;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.time-3{
+/* .time-3{
     position:relative;
     top:10%;
     left:40%;
@@ -90,12 +91,9 @@ html{
     position:relative;
     top:-42%;
     left:-40%;
-} 
+}  */
 .short-hand{
+    display:inline-block;
     width:5%;
-    height:2px;
-    background:black;
-    position:relative;
-    top:-55%;
-    left:-3%;
+    transform: rotate(0deg);
 }
