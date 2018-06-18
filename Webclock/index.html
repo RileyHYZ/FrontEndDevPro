@@ -4,16 +4,60 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="style.css"> 
+    <script>
+        function setDate(){
+            const now = new Date();
+
+            const secondHand = document.querySelector('.second-hand');
+            const minHand = document.querySelector('.min-hand');
+            const hourHand = document.querySelector('.hour-hand');
+            const hourHandInline = document.querySelector('.hour-hand-inline');
+
+    
+            const seconds = now.getSeconds();
+            const secondsDegrees = (seconds / 60) * 360 + 90;
+            const mins = now.getMinutes();
+            const minsDegrees = (mins / 60) * 360 + 90;
+            const hours = now.getHours();
+            const hoursDegrees = (hours / 12) * 360 + 90;
+            secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+            minHand.style.transform = `rotate(${minsDegrees}deg)`;
+            hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
+            hourHandInline.style.transform = `rotate(${hoursDegrees}deg)`;
+
+        }
+        setInterval(setDate, 1000);
+    </script>
 </head>
 
 <body>
     <div class="clock">
         <div class="clock-face">
+            <div class="time">12</div>
+            <div class="time time-3">3</div>
+            <div class="time time-6">6</div>
+            <div class="time time-9">9</div>
+
             <div class="hand hour-hand"></div>
-            <div class="hand min-hand" style="transform:rotate(120deg);transition-timing-function: ease-in-out"></div>
+            <div class="hand hour-hand-inline"></div>
+            <div class="hand min-hand"></div>
             <div class="hand second-hand"></div>
+
+            <div keyVal="1" class="short-hand" style="top:-57%;"></div>
+            <div keyVal="2" class="short-hand" style="transform:rotate(90deg);top:-108%;left:47%"></div>
+            <div keyVal="3" class="short-hand" style="transform:rotate(180deg);top:-58%;left:98%"></div>
+            <div keyVal="4" class="short-hand" style="transform:rotate(270deg);top:-8%;left:47%"></div>
+            <div keyVal="5" class="short-hand" style="transform:rotate(30deg);top:-85%;left:4.5%;background-color:red"></div>
+            <div keyVal="6" class="short-hand" style="transform:rotate(60deg);top:-104%;left:23%;background-color:red"></div>
+            <div keyVal="7" class="short-hand" style="transform:rotate(120deg);top:-104.5%;left:73%;background-color:red"></div>
+            <div keyVal="8" class="short-hand" style="transform:rotate(150deg);top:-87.5%;left:91%;background-color:red"></div>
+            <div keyVal="9" class="short-hand" style="transform:rotate(210deg);top:-38.5%;left:91.5%;background-color:red"></div>
+            <div keyVal="10" class="short-hand" style="transform:rotate(240deg);top:-20.3%;left:73%;background-color:red"></div>
+            <div keyVal="11" class="short-hand" style="transform:rotate(300deg);top:-21%;left:22.5%;background-color:red"></div>
+            <div keyVal="12" class="short-hand" style="transform:rotate(330deg);top:-40%;left:3.5%;background-color:red"></div>
+
+
         </div>
     </div>
-
     
 </body>
